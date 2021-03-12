@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnage
+{% endblock %}
+
+{% block monTitre %}Liste des personnages
+{% endblock %}
+
+{% block body %}
+<table class="table">
+	<tr class="thead-dark">
+		<th>Image</th>
+		<th>Nom</th>
+		<th>Age</th>
+		<th>Sexe</th>
+		<th>Force</th>
+		<th>Agilité</th>
+		<th>Intelligence</th>
+	</tr>
+	{% for player in players %}
+		<div>{{player.nom}}</div>
+	{% endfor %}
+
+	<tr>
+		<td>
+			<img {{player.nom}} </td> </tr> </table> {% endfor %} {% endblock %}
