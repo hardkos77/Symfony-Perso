@@ -37,18 +37,18 @@ class PersonnageController extends AbstractController
             'âge' => 25,
             'sexe' => true,
             'caractéristiques' => [
-                'force' => 2,
-                'agilité' => 6,
-                'intelligence' => 14,
+                'force' => 5,
+                'agilité' => 3,
+                'intelligence' => 20,
         ]];
         $j3 =[
             'nom' => 'Tya',
             'âge' => 25,
             'sexe' => true,
             'caractéristiques' => [
-                'force' => 2,
-                'agilité' => 6,
-                'intelligence' => 14,
+                'force' => 15,
+                'agilité' => 10,
+                'intelligence' => 8,
         ]];
         $players = [
             'j1' => $j1,

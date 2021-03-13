@@ -7,20 +7,34 @@
 {% endblock %}
 
 {% block body %}
-<table class="table">
-	<tr class="thead-dark">
-		<th>Image</th>
-		<th>Nom</th>
-		<th>Age</th>
-		<th>Sexe</th>
-		<th>Force</th>
-		<th>Agilité</th>
-		<th>Intelligence</th>
-	</tr>
-	{% for player in players %}
-		<div>{{player.nom}}</div>
-	{% endfor %}
+	<table class="table">
+		<tr class="thead-dark">
+			<th>Image</th>
+			<th>Nom</th>
+			<th>Age</th>
+			<th>Sexe</th>
+			<th>Force</th>
+			<th>Agilité</th>
+			<th>Intelligence</th>
+		</tr>
+		{% for player in players %}
+			<tr>
+				<td>
+					<img{{player.nom}}</td src="{{asset('images/personnages/'~ player.nom~'.png')}}" </td> <td>>
+						<td>{{player.âge}}</td>
+						<td>
+							{% if player.sexe %}
+								Homme
+							{% else %}
+								Femme
+							{% endif %}
+						</td>
+						<td>{{player.caractéristiques.force}}</td>
+						<td>{{player.caractéristiques.agilité}}</td>
+						<td>{{player.caractéristiques.intelligence}}</td>
+					</tr>
 
-	<tr>
-		<td>
-			<img {{player.nom}} </td> </tr> </table> {% endfor %} {% endblock %}
+				{% endfor %}
+			</tr>
+		</table>
+	{% endblock %}
